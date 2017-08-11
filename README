@@ -1,0 +1,13 @@
+Limitations:
+
+1) All CPUs should have the same number of cores.
+   Other configurations will not adapt properly.
+2) MSB methods must use exactly 64 threads
+   due to implementing only 64-way range partition.
+3) MSB methods need a large fudge factor or a small
+   block, otherwise the algorithm will be unable to
+   distribute blocks across NUMA regions correctly.
+3) MSB methods are implemented to run on full
+   32-bit data
++
+4) Should install PAPI Library first, if want to run this experiments to measure the energy. In my platform, the PAPI Library is installed in the /usr/local/ directory. PAPI Version: 5.5.1.0
